@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>○×ゲーム</h1>
+  <div class="btn">
+    <button type="button" id="reset" onclick="g.reset()">リセット</button>
+  </div>
+  
+  <br>
+  <table class="board">
+    <tbody>
+      <tr>
+        <td id="0" onclick="g.proceed('0')">0</td>
+        <td id="1" onclick="g.proceed('1')">1</td>
+        <td id="2" onclick="g.proceed('2')">2</td>
+      </tr>
+      <tr>
+        <td id="3" onclick="g.proceed('3')">3</td>
+        <td id="4" onclick="g.proceed('4')">4</td>
+        <td id="5" onclick="g.proceed('5')">5</td>
+      </tr>
+      <tr>
+        <td id="6" onclick="g.proceed('6')">6</td>
+        <td id="7" onclick="g.proceed('7')">7</td>
+        <td id="8" onclick="g.proceed('8')">8</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="message">
+    <p id="msg">Let's play the game!</p>
+  </div>
+  <script src="./marubatsu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+h1{
+  text-align: center;
+}
+.btn{
+  text-align: center;
+}
+.btn button{
+  font-size: 20px;
+}
+table , td, th {
+	border: 3px solid black;
+	border-collapse: collapse;
+  margin: 0 auto;
+}
+td, th {
+	padding: 3px;
+	width: 100px;
+	height: 100px;
+  text-align:center;
+}
+p{
+  text-align:center;
+}
+.board{
+  text-align:center;
+}
+.board td{
+  font-size: 50px;
+}
+
+.message p{
+  font-size: 25px;
+}
