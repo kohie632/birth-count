@@ -114,6 +114,7 @@ class Agent{
 
   next(board){
     if(this.com){
+      setTimeout(console.log("sleep()"),3000);
       let z = [0,0,0,0,0,0,0,0,0,0]
       let c = 0;
       for(let i = 0; i< 9; i++){
@@ -124,9 +125,6 @@ class Agent{
       }
       return z[Math.floor(Math.random() * (c-1))];
     }
-  }
-  sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
 
