@@ -90,18 +90,21 @@ class Game{
     }
     if(flag){
       if(this.winner === 1){
-        document.getElementById("msg").textContent = "○の勝ちです！";
+        document.getElementById("msg").textContent = "You Win!";
       }
       if(this.winner === -1){
-        document.getElementById("msg").textContent = "×の勝ちです！";
+        document.getElementById("msg").textContent = "You Lose!";
       }
       if(this.winner === 0){
-        document.getElementById("msg").textContent = "引き分け！";
+        document.getElementById("msg").textContent = "Draw";
       }
     }else{
-
+      if(this.teban === 1){
+        document.getElementById("msg").textContent = "It's your turn!";
+      }else{
+        document.getElementById("msg").textContent = "It's my turn!";
+      }
     }
-    
     return flag;
   }
 }
