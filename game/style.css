@@ -31,3 +31,7 @@ p{
 .message p{
   font-size: 25px;
 }
+
+.link {
+  text-align: center;
+}
