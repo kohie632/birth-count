@@ -105,9 +105,9 @@ function eqar(a, b){
   return true;
 }
 function calc(){
-  return [1, ["a","b", "c","d"]]
+  const i = [1, 2, 3, 4, 3, 6,];
+  return i.findIndex(item => item === 3)
 }
 
 a = calc()
-console.log(a[0])
-console.log(a[1])
+console.log(a)
