@@ -6,17 +6,24 @@ function greet(){
   const nowTime = now.getHours()+1;
   let greet = "";　
 
-  if (5 <= nowTime && nowTime < 12 ){
-    greet = "Good Morning " + Name + ".";
-  }
-  if (12 <= nowTime && nowTime < 16){
-    greet = "Good Afternoon " + Name + ".";
-  }
-  if (16 <= nowTime && nowTime < 20){
-    greet = "Good Evening " + Name + ".";
-  }
-  if (20 <= nowTime){
-    greet = "Good Night " + Name + ".";
+  if(now.getMonth()+1 === bir.month && now.getDate() === bir.day){
+    console.log(now.getMonth()+1,now.getDate())
+    greet = "Happy Birthday " + Name + "!"
+  }else{
+    console.log(now.getMonth()+1,now.getDate())
+    if (5 <= nowTime && nowTime < 12 ){
+      greet = "Good Morning " + Name + ".";
+    }
+    if (12 <= nowTime && nowTime < 16){
+      greet = "Good Afternoon " + Name + ".";
+    }
+    if (16 <= nowTime && nowTime < 20){
+      greet = "Good Evening " + Name + ".";
+    }
+    if (20 <= nowTime){
+      greet = "Good Night " + Name + ".";
+    }
+    
   }
   document.getElementById("greet").textContent = greet;
   setTimeout(countdown,1000*60);//1分ごとに繰り返す
@@ -24,12 +31,9 @@ function greet(){
 
 function word(){
   const now = new Date();
-  let num = 0;
-  if (now.getMonth()+1 != bir.month || now.getDay()+1 != bir.day){
-    const min = 1;
-    const max = Words.length-1;
-    num = Math.floor(Math.random() * (max - min) + min);
-  }
+  const min = 0;
+  const max = Words.length-1;
+  const num = Math.floor(Math.random() * (max - min) + min);
   document.getElementById("word").textContent = Words[num];
   document.getElementById("author").textContent = "- "+Authors[num]+" -";
   setTimeout(countdown,1000*60);//10分ごとに繰り返す
@@ -90,6 +94,5 @@ function test(){
 }
 
 greet();
-countdown();
 word();
-test();
+countdown();
