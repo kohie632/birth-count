@@ -94,17 +94,17 @@ class Game{
       }
     }
     if(flag){
-      if(this.winner === 1){
+      if(this.winner === -1){
         document.getElementById("msg").textContent = "You Lose!";
       }
-      if(this.winner === -1){
+      if(this.winner === 1){
         document.getElementById("msg").textContent = "You Win!";
       }
       if(this.winner === 0){
         document.getElementById("msg").textContent = "Draw.";
       }
     }else{
-      if(this.teban === 1){
+      if(this.teban === -1){
         document.getElementById("msg").textContent = "It's my turn!";
       }else{
         document.getElementById("msg").textContent = "It's your turn!";
