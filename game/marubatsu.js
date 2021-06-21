@@ -95,19 +95,19 @@ class Game{
     }
     if(flag){
       if(this.winner === 1){
-        document.getElementById("msg").textContent = "You Lose!";
+        document.getElementById("msg").textContent = "先手の勝ちです！";
       }
       if(this.winner === -1){
-        document.getElementById("msg").textContent = "You Win!";
+        document.getElementById("msg").textContent = "後手の勝ちです！";
       }
       if(this.winner === 0){
-        document.getElementById("msg").textContent = "Draw.";
+        document.getElementById("msg").textContent = "引き分けです";
       }
     }else{
       if(this.teban === 1){
-        document.getElementById("msg").textContent = "It's my turn!";
+        document.getElementById("msg").textContent = "先手番です";
       }else{
-        document.getElementById("msg").textContent = "It's your turn!";
+        document.getElementById("msg").textContent = "後手番です";
       }
     }
     return flag;
@@ -122,28 +122,6 @@ function eqar(a, b){
   }
   return true;
 }
-
-// class Agent{
-//   constructor(teban, com){  //teban:先手1、後手-1、　com:false, 機械true
-//     this.teban = teban;
-//     this.com = com;
-//   }
-
-//   next(board){
-//     if(this.com){
-//       setTimeout(console.log("sleep()"),3000);
-//       let z = [0,0,0,0,0,0,0,0,0,0]
-//       let c = 0;
-//       for(let i = 0; i< 9; i++){
-//         if(board[i]===0){
-//           z[c]=i;
-//           c++;
-//         }
-//       }
-//       return z[Math.floor(Math.random() * (c-1))];
-//     }
-//   }
-// }
 
 class Agent{
   MoveS = {210000000: 4, 120000000: 4, 201000000: 6, 20100000: 4, 221100000: 4, 200001000: 2, 212100000: 4, 100002000: 4, 121200000: 4, 211002000: 4, 20010000: 0, 100020000: 8, 10020000: 0, 20000010: 6, 120201000: 8, 210000120: 4, 210102000: 4, 20211000: 8, 210010020: 3, 120020010: 6, 20120010: 6, 200000001: 4, 212000100: 7, 201002001: 6, 210002001: 7, 200012001: 7, 210020001: 6, 221000010: 8, 120002010: 6, 210000021: 4, 221100210: 5, 221102001: 6, 210020121: 5, 210122001: 6, 210002100: 4, 211000020: 4, 201002010: 6, 210001020: 4, 212100120: 4, 211002021: 4, 212010120: 5, 210012021: 6, 20201010: 8, 221102010: 6, 120221010: 8, 210002121: 4, 211102020: 6, 212100021: 4, 210102021: 4, 210112020: 6, 212000121: 4}
