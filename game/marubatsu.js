@@ -13,10 +13,10 @@ class Game{
     for(let i = 0; i < 9; i++){
       this.update(String(i))
     }
-    // this.aSente = new Agent(1, false);
-    // this.aGote = new Agent(-1, true);
-    this.aSente = new Agent(1, true);
-    this.aGote = new Agent(-1, false);
+    const sp = document.getElementById("sentePlayer")
+    const gp = document.getElementById("gotePlayer")
+    this.aSente = new Agent(1, sp.value === "AI");
+    this.aGote = new Agent(-1, gp.value === "AI");
     document.getElementById("msg").textContent = "Let's play the game!";
     this.agent();
   }
